@@ -1,0 +1,60 @@
+{#
+ #  Python Web App Framework
+ #
+ #  Filename:  login.html
+ #  By:  Matthew Evans
+ #       https://www.wtfsystems.net/
+ #
+ #  See LICENSE.md for copyright information.
+ #  See README.md for usage information.
+ #}
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login Test</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+
+<body>
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    <div class="section">
+    {% for message in messages %}
+    <div class="output">{{ message }}</div>
+    {% endfor %}
+    </div>
+{% endif %}
+{% endwith %}
+
+<style>
+    /* Login */
+    .login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 14px;
+    }
+</style>
+
+<div class="login">
+<form action = "/dologin" method = "POST">
+<table>
+    <tr><td colspan="2" style="text-align: center;"><h3>Login</h3></td></tr>
+    <tr>
+        <td>Username:</td><td><input type = 'text' name = 'username'/></td>
+    </tr>
+    <tr>
+        <td>Password:</td><td><input type = 'password' name = 'passwd'/></td>
+    </tr>
+    <tr><td colspan="2" style="text-align: center;">
+        <input type = 'submit' value = 'Login'/>
+    </td></tr>
+</table>
+</form>
+</div>
+
+</body>
+</html>

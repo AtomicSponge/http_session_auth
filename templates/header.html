@@ -1,0 +1,40 @@
+{#
+ #  Python Web App Framework
+ #
+ #  Filename:  header.html
+ #  By:  Matthew Evans
+ #       https://www.wtfsystems.net/
+ #
+ #  See LICENSE.md for copyright information.
+ #  See README.md for usage information.
+ #}
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login Test</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+<body>
+{# Navigation bar #}
+<div class="navbar">
+    <div class="leftnav">
+        <form>
+        {# Left side buttons #}
+        <input type="button" onclick="window.location.href='/';" value="Home" class="navbutton"/>
+        </form>
+    </div>
+    <div class="centernav">
+        {# Center navigation #}
+        ~~~~~~~[]=¤ԅ(ˊᗜˋ* )੭<br/>********
+    </div>
+    <div class="rightnav">
+        <form>
+        {# Right side buttons #}
+        <input type="button" onclick="window.location.href='/settings';" value="Settings" class="navbutton"/>
+        <input type="button" onclick="window.location.href='/dologout';" value="Logout" class="navbutton"/>
+        </form>
+    </div>
+</div>
+{#  End navigation bar #}

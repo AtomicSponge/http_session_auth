@@ -1,0 +1,47 @@
+{#
+ #  Python Web App Framework
+ #
+ #  Filename:  settings.html
+ #  By:  Matthew Evans
+ #       https://www.wtfsystems.net/
+ #
+ #  See LICENSE.md for copyright information.
+ #  See README.md for usage information.
+ #}
+
+{% include "header.html" %}
+
+{#
+ # Output for flashed messages
+ #}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="section">
+    {% for message in messages %}
+        <div class="output">{{ message }}</div>
+    {% endfor %}
+    </div>
+    {% endif %}
+{% endwith %}
+
+<div class="section">
+<form action = "/dochangepw" method = "POST">
+<table>
+    <tr><td colspan="2" style="text-align: center;"><h3>Change Password</h3></td></tr>
+    <tr>
+        <td>Old Password:</td><td><input type = 'password' name = 'oldpw'/></td>
+    </tr>
+    <tr>
+        <td> New Password:</td><td><input type = 'password' name = 'newpw1'/></td>
+    </tr>
+    <tr>
+        <td> Confirm Password:</td><td><input type = 'password' name = 'newpw2'/></td>
+    </tr>
+    <tr><td colspan="2" style="text-align: center;">
+        <input type = 'submit' value = 'Change Password'/>
+    </td></tr>
+</table>
+</form>
+</div>
+
+{% include "footer.html" %}

@@ -1,0 +1,112 @@
+/*
+ *  Python Web App Framework
+ *
+ *  Filename:  style.css
+ *  By:  Matthew Evans
+ *       https://www.wtfsystems.net/
+ *
+ *  See LICENSE.md for copyright information.
+ *  See README.md for usage information.
+ */
+
+/* Main body */
+body {
+    color: #000000;
+    background: #808080;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+}
+/* Divider */
+hr {
+    color: #000000;
+    background: #000000;
+    height: 1px;
+    width: 100%;
+}
+
+/* Navigation styles */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    background: #4a4a4a;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    margin: 16px;
+}
+.navbar > .leftnav {
+    flex: 35%;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: center;
+}
+.navbar > .centernav {
+    flex: 30%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.navbar > .rightnav {
+    flex: 35%;
+    text-align: right;
+    justify-content: flex-end;
+    align-items: center;
+}
+.navbutton {
+    background: #ffffff;
+    color: #000000;
+    padding: 6px 12px;
+    border-radius: 12px;
+}
+.navbutton:hover {
+    background: #808080;
+    color: #000000;
+}
+.navbutton:active {
+    background: #808080;
+    color: #000000;
+    transform: translateY(4px);
+}
+/* End nagivation styles */
+
+/* Section divider */
+.section {
+    flex: 100%;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: #808080;
+    color: #000000;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+/* Message output */
+.output {
+    flex: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: #ffff00;
+    color: #000000;
+    font-weight: bold;
+    padding: 12px;
+    margin: 64px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Page footer */
+footer {
+    flex: 100%;
+    background: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 6px;
+    margin: 16px;
+}
