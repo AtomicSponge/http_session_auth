@@ -1,5 +1,5 @@
-*.code-workspace
 __pycache__/
-_bak/
+*.code-workspace
+*_bak/
 docs/
 *.db
